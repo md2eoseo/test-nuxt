@@ -83,5 +83,15 @@
 <script>
 export default {
   name: "IndexPage",
+  async asyncData({ error, $http }) {
+    try {
+      const res = await $http.$get(`/api/health`);
+      console.log(res);
+      return { res };
+    } catch (e) {
+      console.log(e);
+      error(e);
+    }
+  },
 };
 </script>

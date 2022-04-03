@@ -15,19 +15,6 @@
 <script>
 export default {
   name: "TodoPage",
-  setup(props, context) {
-    // Attributes (Non-reactive object)
-    console.log(context.attrs);
-
-    // Slots (Non-reactive object)
-    console.log(context.slots);
-
-    // Emit Events (Method)
-    console.log(context.emit);
-  },
-  mounted(ctx) {
-    console.log(ctx);
-  },
   data() {
     return {
       todos: [
@@ -36,11 +23,6 @@ export default {
         { id: 3, title: "Nuxt", date: "2022-03-25" },
       ],
     };
-  },
-  methods: {
-    hello(ctx) {
-      console.log(ctx);
-    },
   },
 };
 </script>
